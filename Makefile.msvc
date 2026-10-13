@@ -1,0 +1,14 @@
+# Visual C++ 6.0 / Visual Studio 6.0 SP6
+# Run: nmake /f Makefile.msvc
+
+TARGET=retroexplorer.exe
+CFLAGS=/nologo /W3 /O1 /DWINVER=0x0410 /D_WIN32_WINNT=0x0410
+LIBS=ole32.lib oleaut32.lib uuid.lib
+
+all: $(TARGET)
+
+$(TARGET): browser.cpp
+	cl $(CFLAGS) browser.cpp /link /SUBSYSTEM:WINDOWS /OUT:$(TARGET) $(LIBS)
+
+clean:
+	del /Q retroexplorer.exe browser.obj 2>NUL

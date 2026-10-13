@@ -1,0 +1,15 @@
+# Modern MinGW can produce a 32-bit binary. Use an i686 MinGW toolchain.
+# Run: mingw32-make -f Makefile.mingw
+
+CXX ?= i686-w64-mingw32-g++
+TARGET = retroexplorer.exe
+CXXFLAGS = -Os -Wall -DWINVER=0x0410 -D_WIN32_WINNT=0x0410
+LDLIBS = -lole32 -loleaut32 -luuid
+
+all: $(TARGET)
+
+$(TARGET): browser.cpp
+	$(CXX) $(CXXFLAGS) -mwindows -o $@ $< $(LDLIBS)
+
+clean:
+	del /Q $(TARGET) 2>NUL
