@@ -35,6 +35,12 @@ mingw32-make -f Makefile.mingw
 Copy `retroexplorer.exe` to the Windows 98 machine. It is a 32-bit desktop
 program. Launching it with a URL as the command-line argument opens that URL.
 
+## Setup package
+
+A self-extracting browser setup is included as `retroexplorer-setup.exe`. On a
+Windows system, running it will unpack the browser files to a selected folder and
+launch `retroexplorer.exe` automatically.
+
 ## Important limitation
 
 This is compatible with Windows 98, but it inherits Internet Explorer's
