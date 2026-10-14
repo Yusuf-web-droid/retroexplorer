@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Explorer</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --panel: #111827;
+        --panel-alt: #1f2937;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #60a5fa;
+        --accent-strong: #3b82f6;
+        --border: #334155;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #0f172a 0%, #111827 100%);
+        color: var(--text);
+        min-height: 100vh;
+      }
+
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 48px 20px 64px;
+      }
+
+      .hero {
+        background: rgba(17, 24, 39, 0.9);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 32px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      }
+
+      h1 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        margin: 0 0 12px;
+      }
+
+      p {
+        color: var(--muted);
+        line-height: 1.6;
+        font-size: 1.02rem;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .button {
+        display: inline-block;
+        background: linear-gradient(180deg, var(--accent) 0%, var(--accent-strong) 100%);
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .button.secondary {
+        background: #111827;
+        border-color: var(--border);
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-top: 34px;
+      }
+
+      .card {
+        background: rgba(31, 41, 55, 0.8);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 20px;
+      }
+
+      .card h2 {
+        margin-top: 0;
+        font-size: 1.2rem;
+      }
+
+      ul {
+        padding-left: 18px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="hero">
+        <h1>Retro Explorer</h1>
+        <p>
+          A lightweight Windows 98-era web browser shell built around the Internet Explorer
+          WebBrowser control. It is designed for legacy websites, local intranet pages, and older
+          systems that rely on classic Windows technology.
+        </p>
+
+        <div class="actions">
+          <a class="button" href="retroexplorer-setup.zip">Download Setup Zip</a>
+          <a class="button secondary" href="retroexplorer-setup.bat">Download Batch Installer</a>
+        </div>
+      </section>
+
+      <div class="card-grid">
+        <section class="card">
+          <h2>System requirement</h2>
+          <ul>
+            <li>Windows 98 or later</li>
+            <li>Internet Explorer 4 or newer</li>
+            <li>32-bit desktop app</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Install</h2>
+          <p>Download the zip package, extract it, and run the batch installer on a Windows machine.</p>
+        </section>
+
+        <section class="card">
+          <h2>Important note</h2>
+          <p>This browser is meant for legacy browsing and is not suitable for modern HTTPS or sensitive data use.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
